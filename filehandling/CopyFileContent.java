@@ -11,8 +11,10 @@ public class CopyFileContent {
 		String destinationFile = "D:\\honey\\destination.txt";
 
 		try (FileReader reader = new FileReader(sourceFile);FileWriter writer = new FileWriter(destinationFile)) {
+				//read
 				int data = reader.read();
 				while (data != -1) {
+					//write 
 					writer.write((char) data);
 					data = reader.read();
 				}
